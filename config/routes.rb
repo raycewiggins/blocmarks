@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'topics/index'
+
+  get 'topics/show'
+
+  get 'topics/new'
+
+  get 'topics/edit'
+
   root 'welcome#index'
 
   get 'welcome/about'
