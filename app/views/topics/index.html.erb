@@ -4,11 +4,11 @@
 <div>
 <div class="col-md-4">
   <h3>
-  <%= link_to topic.title, topic %>
-</h3>
+    <%= link_to topic.title, topic %>
+  </h3>
 
-  <%= link_to "E", edit_topic_path(topic), class: 'btn btn-success' %>
-  <%= link_to "D",  topic_path(topic), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this topic?' } %>
+  <%= link_to "Edit", edit_topic_path(topic), class: 'btn btn-success' %>
+  <%= link_to "Delete",  topic_path(topic), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this topic?' } %>
   </div>
 </div>
 <% end %>

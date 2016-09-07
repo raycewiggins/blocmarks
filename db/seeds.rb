@@ -30,10 +30,10 @@
 # bookmarks = Bookmark.all
 
 # Sample User
-standard = User.create!(
-  email:    'standard@example.com',
-  password: 'helloworld'
-)
+# standard = User.create!(
+#   email:    'standard@example.com',
+#   password: 'helloworld'
+# )
 
 #Output
 puts 'Seed finished'
