@@ -8,25 +8,33 @@
       <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="container">
-      <ul class="nav nav-tabs">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Topics", topics_path %></li>
-        <li><%= link_to "Likes", likes_path %></li>
-        <li class="pull-right">
-              <% if user_signed_in? %>
-                <li>Signed in as: <strong><%= current_user.email %></strong></li>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <div class="navbar-brand"><%= link_to "Blocmarks", root_path %></div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><li><%= link_to "Topics", topics_path %></li><span class="sr-only">(current)</span></li>
+            <li><%= link_to "Likes", likes_path %></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+            <li><%= link_to 'My Bookmarks', users_show_path %></li>
                 <li><%= link_to 'Settings', edit_user_registration_path %></li>
                 <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-              <% else %>
-              <div class="pull-right">
-                <li><%= link_to "Sign In", new_user_session_path %></li>
-                <li><%= link_to "Sign Up", new_user_registration_path %></li>
-              </div>
-              <% end %>
-        </li>
-      </ul>
-    </div>
+            </li>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
     <% if flash[:notice] %>
       <div class="alert alert-success">

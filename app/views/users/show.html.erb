@@ -1,0 +1,25 @@
+<h1 style="media text-align:left">My Blocmarks</h1>
+
+<div class="bookmarks container">
+  <h3>My Bookmarks</h3>
+  <div class="row">
+    <% @bookmarks.each do |bookmark| %>
+    <div class="col-md-2 media">
+      <h5>
+        <strong><%= link_to bookmark.url %></strong>
+      </h5>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="likes">
+  <h3>My Likes</h3>
+  <% @likes.each do |like| %>
+  <div class="col-md-2 media">
+    <h5>
+      <strong><%= link_to like.bookmark.url %></strong>
+    </h5>
+  </div>
+  <% end %>
+</div>
