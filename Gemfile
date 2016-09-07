@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'pundit'
+gem 'faker'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
