@@ -1,2 +1,7 @@
-<h1>Topics#edit</h1>
-<p>Find me in app/views/topics/edit.html.erb</p>
+<h1>edit the topic.</h1>
+<%= form_for @topic do |f| %>
+<div class="form-group">
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control', placeholder: "#{@topic.title}" %>
+  <%= f.submit "Save", class: 'btn btn-success' %>
+  <% end %>
