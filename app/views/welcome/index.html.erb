@@ -1,2 +1,10 @@
-<h1>Welcome to Blocmarks</h1>
-<p>Save and share all your favorite bookmarks.</p>
+<div class="container">
+  <h1>Welcome to Blocmarks</h1>
+  <p>Save and share all your favorite bookmarks.</p>
+
+  <script type="text/javascript">
+    $(document).on("ready page:load", function () {
+      blocmetrics.report("page_view");
+    })
+  </script>
+  <div>

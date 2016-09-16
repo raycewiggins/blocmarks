@@ -1,7 +1,9 @@
-<h1>Edit the url</h1>
-<%= form_for [@bookmark.topic, @bookmark] do |f| %>
-       <div class="form-group col-md-4">
-         <%= f.label :url %>
-         <%= f.text_field :url, class: 'form-control', placeholder: "#{@bookmark.url}" %>
-       <%= f.submit "Save", class: 'btn btn-success' %>
-     <% end %>
+<div class="container">
+  <h1>Edit the url</h1>
+  <%= form_for [@bookmark.topic, @bookmark] do |f| %>
+         <div class="form-group col-md-4">
+           <%= f.label :url %>
+           <%= f.text_field :url, class: 'form-control', placeholder: "#{@bookmark.url}" %>
+         <%= f.submit "Save", class: 'btn btn-success' %>
+       <% end %>
+</div>

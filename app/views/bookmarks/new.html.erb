@@ -1,7 +1,10 @@
-<h1>Create a new bookmark</h1>
-<%= form_for [@topic, @bookmark] do |f| %>
-       <div class="form-group media col-md-6">
-         <%= f.label :url %>
-         <%= f.text_field :url, class: 'form-control', placeholder: "Enter bookmark url" %>
-       <div class='media'><%= f.submit "Save", class: 'btn btn-success' %></div>
-     <% end %>
+<div class="container">
+  <h1>Create a new bookmark</h1>
+  <%= form_for [@topic, @bookmark] do |f| %>
+  <div class="form-group media col-md-6">
+    <%= f.label :url %>:
+    <%= f.text_field :url, class: 'form-control', placeholder: "Enter bookmark url" %>
+    <div class='media'><%= f.submit "Save", class: 'btn btn-success' %></div>
+  </div>
+  <% end %>
+</div>

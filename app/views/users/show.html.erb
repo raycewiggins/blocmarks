@@ -1,25 +1,23 @@
-<h1 style="media text-align:left">My Blocmarks</h1>
+<div class="container">
+  <h1>My Blocmarks</h1>
 
-<div class="bookmarks container">
-  <h3>My Bookmarks</h3>
-  <div class="row">
-    <% @bookmarks.each do |bookmark| %>
-    <div class="col-md-2 media">
-      <h5>
-        <strong><%= link_to bookmark.url %></strong>
-      </h5>
+  <div class="bookmarks">
+    <div class="row">
+      <h3>My Bookmarks</h3>
+      <% @bookmarks.each do |bookmark| %>
+        <div class="col-md-2 media">
+          <h5><%= link_to bookmark.url %></h5>
+        </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-</div>
 
-<div class="likes">
-  <h3>My Likes</h3>
-  <% @likes.each do |like| %>
-  <div class="col-md-2 media">
-    <h5>
-      <strong><%= link_to like.bookmark.url %></strong>
-    </h5>
+  <div class="likes">
+    <div class="row">
+      <h3>My Likes</h3>
+      <% @likes.each do |like| %>
+        <div class="col-md-2 media">
+          <h5><%= link_to like.bookmark.url %></h5>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <% end %>
-</div>
