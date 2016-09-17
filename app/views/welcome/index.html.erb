@@ -1,7 +1,29 @@
-<div class="container">
-  <h1>Welcome to Blocmarks</h1>
-  <p>Save and share all your favorite bookmarks.</p>
+<br>
+ <div class="jumbotron">
+   <h1>Welcome to Blocmarks</h1>
+   <p>A resource for saving and sharing your favorite sites with your friends</p>
+   <p>
+     <%= link_to "Sign In", new_user_session_path %> or
+     <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+   </p>
+ </div>
 
+ <div class="row">
+   <div class="col-md-4">
+     <h2>Explore hundreds of bookmarks</h2>
+     <p>Tons of great sites waiting for you to be discovered</p>
+   </div>
+   <div class="col-md-4">
+     <h2>Stay organized</h2>
+     <p>Bookmarks can come from all over the web, but with our topic system it's easy to categorize all your favorite sites.</p>
+   </div>
+   <div class="col-md-4">
+     <h2>Share with your friends</h2>
+     <p>Blocmarks gives you the ability to share all of your favorite bookmarks with your friends</p>
+   </div>
+ </div>
+
+ <!-- Blocmetrics click tracking code -->
   <script type="text/javascript">
     $(document).on("ready page:load", function () {
       blocmetrics.report("page_view");

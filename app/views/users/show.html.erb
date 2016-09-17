@@ -5,7 +5,7 @@
     <div class="row">
       <h3>My Bookmarks</h3>
       <% @bookmarks.each do |bookmark| %>
-        <div class="col-md-2 media">
+        <div class="col-md-4 panel panel-default panel-body">
           <h5><%= link_to bookmark.url %></h5>
         </div>
       <% end %>
@@ -15,7 +15,7 @@
     <div class="row">
       <h3>My Likes</h3>
       <% @likes.each do |like| %>
-        <div class="col-md-2 media">
+        <div class="col-md-4 panel panel-default panel-body">
           <h5><%= link_to like.bookmark.url %></h5>
         </div>
       <% end %>

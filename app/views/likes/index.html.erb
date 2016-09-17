@@ -1,8 +1,11 @@
 <div class="container">
   <h1>All Likes</h1>
-  <% @likes.each do |like| %>
-    <div class="col-md-4 media">
-        <%= link_to like.bookmark.url %>
-    </div>
-  <% end %>
+    <% @bookmarks.each do |bookmark| %>
+        <% if bookmark.likes.present? %>
+          <div class="col-md-4 panel panel-default panel-body">
+            <%= link_to bookmark.url %>
+            <div class="pull-right"><%= bookmark.likes.count %></div>
+          </div>
+        <% end %>
+    <% end %>
 </div>

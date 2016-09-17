@@ -1,6 +1,7 @@
 class LikesController < ApplicationController
   def index
     @likes = Like.all
+    @bookmarks = Bookmark.all
   end
 
   def create
