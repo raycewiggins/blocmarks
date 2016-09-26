@@ -17,6 +17,41 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// Color variables
+$dark-teal: #226666;
+$darkest-teal: #001F1F;
+$teal: #458989;
+$light-teal: #81C1C1;
+$light-cyan: #E4FFFB;
+$extra-teal: #0B4343;
+
 .bookmarks, .likes {
   text-align: center;
+}
+
+body {
+  background-color: $dark-teal ;
+  color: $light-cyan;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.jumbotron {
+  background-color: $light-teal;
+  border-radius: 16px;
+}
+
+.header {
+  background-color: $darkest-teal;
+  border: none;
+}
+
+.box {
+  background-color: $teal;
+  border-radius: 16px;
+}
+
+.topic-box {
+  background-color: $light-teal;
+  border: none;
+  margin: 5px;
 }
