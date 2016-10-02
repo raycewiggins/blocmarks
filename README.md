@@ -1,3 +1,3 @@
 # Blocmarks
 
-![alt text](app/assets/images/blocmarks_home.jpg "Blocmarks")
+![alt text](app/assets/images/Blocmarks.png "Blocmarks")
